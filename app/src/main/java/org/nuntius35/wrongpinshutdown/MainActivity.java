@@ -1,6 +1,5 @@
 package org.nuntius35.wrongpinshutdown;
 
-import android.app.Activity;
 import android.app.admin.DevicePolicyManager;
 import android.app.AlertDialog;
 import android.content.ComponentName;
@@ -9,12 +8,13 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class MainActivity extends Activity {
+public class MainActivity extends AppCompatActivity {
 
 	static final int ACTIVATION_REQUEST = 47; // identifies our request id
     final Context context = this;
@@ -64,10 +64,8 @@ public class MainActivity extends Activity {
            public void onClick(View v) {
                AlertDialog.Builder alert = new AlertDialog.Builder(context);
                TextView t_view = new TextView(context);
-               t_view.setTextSize(14);
                t_view.setText(R.string.confirmReboot);
                alert.setCustomTitle(t_view);
-               //alert.setTitle(R.string.ConfirmReboot);
                alert.setMessage(R.string.helpReboot);
                alert.setIcon(android.R.drawable.ic_dialog_alert);
                alert.setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
@@ -94,7 +92,6 @@ public class MainActivity extends Activity {
                TextView t_view = new TextView(context);
                t_view.setText(R.string.settingDialog);
                alert.setCustomTitle(t_view);
-               //alert.setTitle(R.string.settingDialog);
                String[] numbers = {"1", "2", "3", "4", "5"};
                int checkedItem = sharedPref.getInt("max_tries",2);
                alert.setSingleChoiceItems(numbers, checkedItem,
