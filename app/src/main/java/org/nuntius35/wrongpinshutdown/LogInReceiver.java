@@ -6,15 +6,15 @@ import android.content.Intent;
 
 public class LogInReceiver extends DeviceAdminReceiver {
 
-	@Override
-	public void onPasswordFailed(Context context, Intent intent) {
+    @Override
+    public void onPasswordFailed(Context context, Intent intent) {
         ShutdownManager sm = new ShutdownManager(context);
         sm.incTries();
-	}
+    }
 
-	@Override
-	public void onPasswordSucceeded(Context context, Intent intent) {
+    @Override
+    public void onPasswordSucceeded(Context context, Intent intent) {
         ShutdownManager sm = new ShutdownManager(context);
         sm.resetTries();
-	}
+    }
 }
