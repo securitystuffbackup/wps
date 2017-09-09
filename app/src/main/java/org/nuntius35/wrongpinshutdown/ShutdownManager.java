@@ -4,9 +4,10 @@ import android.content.Context;
 import android.content.SharedPreferences;
 
 class ShutdownManager {
-    private static final String MAX_TRIES_KEY = "max_tries";
     private static final String TRIES_KEY = "tries";
+    private static final String MAX_TRIES_KEY = "max_tries";
     private static final String PREFERENCES_KEY = "org.nuntius35.wrongpinshutdown.prefs";
+
     private int tries;
     private int max_tries;
     private SharedPreferences sharedPref;
