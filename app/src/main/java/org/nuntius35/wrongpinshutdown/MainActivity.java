@@ -6,7 +6,6 @@ import android.content.ComponentName;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -22,6 +21,8 @@ public class MainActivity extends AppCompatActivity {
 	DevicePolicyManager devicePolicyManager;
 	ComponentName demoDeviceAdmin;
 
+    ShutdownManager sm;
+
     protected Button adminButton;
 	protected Button testButton;
     protected Button settingButton;
@@ -30,15 +31,11 @@ public class MainActivity extends AppCompatActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
         setContentView(R.layout.layout);
+         sm = new ShutdownManager(context);
 
         adminButton = (Button) findViewById(R.id.adminButton);
 		testButton = (Button) findViewById(R.id.testButton);
         settingButton = (Button) findViewById(R.id.settingButton);
-
-        SharedPreferences sharedPref = this.getSharedPreferences(
-            "org.nuntius35.wrongpinshutdown.prefs", Context.MODE_PRIVATE);
-        int m = sharedPref.getInt("max_tries", 2);
-        sharedPref.edit().putInt("max_tries", m).apply();
 
 		devicePolicyManager = (DevicePolicyManager) getSystemService(Context.DEVICE_POLICY_SERVICE);
 		demoDeviceAdmin = new ComponentName(this, LogInReceiver.class);
@@ -70,13 +67,7 @@ public class MainActivity extends AppCompatActivity {
                alert.setIcon(android.R.drawable.ic_dialog_alert);
                alert.setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
                    public void onClick(DialogInterface dialog, int whichButton) {
-                       try {
-                           Process process = Runtime.getRuntime().exec(
-                           		new String[] { "su", "-c", "reboot", "-p" });
-                           process.waitFor();
-                       } catch (Exception ex) {
-                           ex.printStackTrace();
-                       }
+                       sm.shutdownDevice();
                    }});
                alert.setNegativeButton(android.R.string.no, null);
                alert.show();
@@ -85,22 +76,17 @@ public class MainActivity extends AppCompatActivity {
 
         settingButton.setOnClickListener(new View.OnClickListener() {
            public void onClick(View v) {
-               SharedPreferences sharedPref = getSharedPreferences(
-                       "org.nuntius35.wrongpinshutdown.prefs", Context.MODE_PRIVATE);
-
                AlertDialog.Builder alert = new AlertDialog.Builder(context);
                TextView t_view = new TextView(context);
                t_view.setText(R.string.settingDialog);
                alert.setCustomTitle(t_view);
                String[] numbers = {"1", "2", "3", "4", "5"};
-               int checkedItem = sharedPref.getInt("max_tries",2);
+               int checkedItem = sm.getMaxTries();
                alert.setSingleChoiceItems(numbers, checkedItem,
                    new DialogInterface.OnClickListener() {
                      @Override
                      public void onClick(DialogInterface dialog, int which) {
-                       SharedPreferences sharedPref = getSharedPreferences(
-                               "org.nuntius35.wrongpinshutdown.prefs", Context.MODE_PRIVATE);
-                       sharedPref.edit().putInt("max_tries", which).apply();
+                         sm.setMaxTries(which);
                      }
                });
                alert.setPositiveButton(android.R.string.ok, null);
