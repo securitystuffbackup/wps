@@ -3,13 +3,13 @@ package org.nuntius35.wrongpinshutdown;
 import android.content.Context;
 import android.content.SharedPreferences;
 
-public class ShutdownManager {
+class ShutdownManager {
     private static final String MAX_TRIES_KEY = "max_tries";
     private static final String TRIES_KEY = "tries";
     private static final String PREFERENCES_KEY = "org.nuntius35.wrongpinshutdown.prefs";
     private int tries;
     private int max_tries;
-    SharedPreferences sharedPref;
+    private SharedPreferences sharedPref;
 
     ShutdownManager(Context context) {
         sharedPref = context.getSharedPreferences(
