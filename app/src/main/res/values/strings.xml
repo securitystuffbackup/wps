@@ -1,18 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Wrong Pin Shutdown</string>
-
     <string name="appIntro">This app monitors failed login attempts. If too many attempts in a row are detected, the device is immediately shut down.</string>
-
-    <string name="adminButton">Check, if this app is registered as a device administrator.</string>
     <string name="adminExplanation">In order to count the number of failed login attempts, you have to register this app as a device administrator.</string>
-    <string name="isAdmin">This app is registered as a device administrator.</string>
-
-    <string name="testButton">Check, if shutdown works on your device.</string>
-
-    <string name="settingButton">Settings</string>
     <string name="settingDialog">How many failed login attempts before shutdown?</string>
-
-    <string name="confirmReboot">Are you sure you want to shut down your device now?</string>
-    <string name="helpReboot">For correct function you have to permanently grant superuser privileges.</string>
+    <string name="settingTitle">Setting</string>
 </resources>

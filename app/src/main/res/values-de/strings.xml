@@ -1,13 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Wrong Pin Shutdown</string>
-    <string name="adminButton">"Kontrolliere, ob diese App als Geräteadministrator registriert ist."</string>
     <string name="adminExplanation">Um die Anzahl der fehlgeschlagenen Anmeldeversuche zu zählen, muss diese App als Geräteadministrator registriert werden.</string>
-    <string name="isAdmin">Diese App ist als Geräteadministrator registriert.</string>
-    <string name="settingButton">Einstellungen</string>
-    <string name="testButton">Kontrolliere, ob das Abschalten des Gerätes funktioniert.</string>
     <string name="settingDialog">Nach wie vielen fehlgeschlagenen Anmeldeversuchen soll das Gerät abgeschaltet werden?</string>
     <string name="appIntro">Diese App überwacht fehlgeschlagene Anmeldeversuche. Wenn zu viele Versuche am Stück festgestellt werden, dann wird das Gerät unverzüglich abgeschaltet.</string>
-    <string name="helpReboot">Um die korrekte Funktion sicherzustellen, müssen Sie der App Superuser Rechte gewähren.</string>
-    <string name="confirmReboot">Sind Sie sicher, dass Sie das Gerät jetzt abschalten möchten?</string>
+    <string name="settingTitle">Einstellung</string>
 </resources>
