@@ -36,7 +36,7 @@ class ShutdownManager {
     private void shutdownDevice() {
         try {
             Process process = Runtime.getRuntime().exec(
-			new String[] { "su", "-c", "reboot", "-p" });
+			new String[] { "su", "-c", "reboot -p" });
 			process.waitFor();
         } catch (Exception ex) {
             ex.printStackTrace();
