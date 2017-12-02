@@ -1,1 +1,1 @@
-Shutdown device on wrong PIN
+Arrête le portable en cas du NIP faux

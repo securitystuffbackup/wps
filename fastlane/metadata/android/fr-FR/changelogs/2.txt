@@ -1,2 +1,2 @@
 ## 2
-  * Fix bug: shutdown instead of reboot
+  * Correction de bogue: arrêter au lie du redémarrage

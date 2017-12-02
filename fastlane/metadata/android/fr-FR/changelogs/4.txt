@@ -1,2 +1,2 @@
 ## 4
-  * Add French translation
+  * Ajouter la traduction en Française

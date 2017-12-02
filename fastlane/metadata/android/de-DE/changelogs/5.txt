@@ -1,0 +1,3 @@
+## 5
+  * Bildschrimfotos und Metadaten hinzugefügt
+  * Zeige Abschaltbefehl in den Einstellungen an

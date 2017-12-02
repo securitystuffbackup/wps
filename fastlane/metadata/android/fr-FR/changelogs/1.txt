@@ -1,2 +1,2 @@
 ## 1
-  * Inital version
+  * Première version
