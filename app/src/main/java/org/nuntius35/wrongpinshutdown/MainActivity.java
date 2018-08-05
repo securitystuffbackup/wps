@@ -11,6 +11,7 @@ import android.preference.EditTextPreference;
 import android.preference.PreferenceManager;
 import android.preference.PreferenceFragment;
 import android.support.v7.app.AppCompatActivity;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     static final int ACTIVATION_REQUEST = 1;
@@ -41,6 +42,26 @@ public class MainActivity extends AppCompatActivity {
         }
 
         sm.testRoot();
+
+        updateStats(sm);
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        sm = new ShutdownManager(context);
+        updateStats(sm);
+    }
+
+    public void updateStats(ShutdownManager sm) {
+        String lastWrong = sm.getLastWrong();
+        String lastShutdown = sm.getLastShutdown();
+        TextView textWrong = (TextView) findViewById(R.id.lastWrong);
+        textWrong.setText(getString(R.string.lastWrong));
+        textWrong.append(lastWrong);
+        TextView textShutdown = (TextView) findViewById(R.id.lastShutdown);
+        textShutdown.setText(getString(R.string.lastShutdown));
+        textShutdown.append(lastShutdown);
     }
 
     public static class MyPreferenceFragment extends PreferenceFragment

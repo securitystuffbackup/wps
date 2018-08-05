@@ -9,4 +9,6 @@
     <string name="settingAdvancedDialog">Changez la commande pour arrêter le portable.</string>
     <string name="settingShutdownCMD">Commande pour arrêter le portable</string>
     <string name="shutdownHOWTO">Ici on peut changer la commande d\'arrêter.\nLa commande standarde: \'reboot -p\'.\nUne autre suggestion: \'svc power shutdown\'.</string>
+    <string name="lastWrong" >Dernier NIP faux: \n</string>
+    <string name="lastShutdown" >Dernier arrête dû aux NIP faux: \n</string>
 </resources>

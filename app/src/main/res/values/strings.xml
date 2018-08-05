@@ -10,4 +10,6 @@
     <string name="settingShutdownCMD">Shutdown command</string>
     <string name="shutdownHOWTO">Here you can specify which command is executed as root to shutdown the device.\nThe default value is \'reboot -p\'.\nAnother option might be \'svc power shutdown\'.</string>
     <string name="shutdownCMD" translatable="false">reboot -p</string>
+    <string name="lastWrong"> Last wrong PIN: \n</string>
+    <string name="lastShutdown"> Last shutdown due to wrong PIN: \n</string>
 </resources>

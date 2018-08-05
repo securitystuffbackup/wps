@@ -8,7 +8,7 @@
         android:orientation="vertical" >
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/textDescription"
             style="?android:attr/listSeparatorTextViewStyle"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
@@ -20,5 +20,22 @@
             class="org.nuntius35.wrongpinshutdown.MainActivity$MyPreferenceFragment"
             android:layout_width="fill_parent"
             android:layout_height="250dp" />
+
+        <TextView
+            android:id="@+id/lastWrong"
+            style="?android:attr/listSeparatorTextViewStyle"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="@string/lastWrong" />
+
+        <TextView
+            android:id="@+id/lastShutdown"
+            style="?android:attr/listSeparatorTextViewStyle"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="@string/lastShutdown" />
     </LinearLayout>
+
 </ScrollView>

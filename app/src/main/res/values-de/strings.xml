@@ -9,4 +9,6 @@
     <string name="settingAdvancedDialog">Den Befehl zum Abschalten verändern</string>
     <string name="settingShutdownCMD">Befehl zum Abschalten</string>
     <string name="shutdownHOWTO">Hier kann der Abschaltbefehl festegelegt werden.\nDie Standardeinstellung lautet \'reboot -p\'.\nEine andere Möglichkeit ist eventuell \'svc power shutdown\'.</string>
+    <string name="lastWrong" >Letzter falscher PIN: \n</string>
+    <string name="lastShutdown" >Letztes Abschalten aufgrund einer falschen PIN: \n</string>
 </resources>
