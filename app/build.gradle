@@ -7,8 +7,8 @@ android {
         applicationId "org.nuntius35.wrongpinshutdown"
         minSdkVersion 15
         targetSdkVersion 25
-        versionCode 6
-        versionName "6"
+        versionCode 7
+        versionName "7"
     }
     buildTypes {
         release {
