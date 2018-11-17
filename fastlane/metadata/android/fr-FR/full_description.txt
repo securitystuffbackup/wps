@@ -1,3 +1,3 @@
-Cette application controle si quelq'un essaie d'utiliser le portabel avec un NIP faux. S'il y a trop des essais, le portabel s'arrête immédiatement.
+Cette application contrôle si une personne essaie d'utiliser le portable avec un NIP faux. S'il y a trop d'essais, le portable s'arrête immédiatement.
 
-Cette application a besoin de droite « root ». Il faut aussi enregistrer l'application comme adminstrateur. Cette mesures sont initié automatiquement en première utilisation.
+Cette application a besoin de droit « root ». Il faut aussi enregistrer l'application comme administrateur. Ces mesures sont initiées automatiquement lors de la première utilisation.
