@@ -1,2 +1,2 @@
 ## 2
-  * Correction de bogue: arrêter au lie du redémarrage
+  * Correction de bogue : arrêter au lie du redémarrage

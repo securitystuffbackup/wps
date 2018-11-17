@@ -54,14 +54,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void updateStats(ShutdownManager sm) {
-        String lastWrong = sm.getLastWrong();
-        String lastShutdown = sm.getLastShutdown();
-        TextView textWrong = (TextView) findViewById(R.id.lastWrong);
+        TextView textWrong = findViewById(R.id.lastWrong);
         textWrong.setText(getString(R.string.lastWrong));
-        textWrong.append(lastWrong);
-        TextView textShutdown = (TextView) findViewById(R.id.lastShutdown);
+        textWrong.append(sm.getLastWrong());
+        TextView textShutdown = findViewById(R.id.lastShutdown);
         textShutdown.setText(getString(R.string.lastShutdown));
-        textShutdown.append(lastShutdown);
+        textShutdown.append(sm.getLastShutdown());
     }
 
     public static class MyPreferenceFragment extends PreferenceFragment
