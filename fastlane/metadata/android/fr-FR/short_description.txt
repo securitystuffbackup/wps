@@ -1,1 +1,1 @@
-Arrête le portable en cas du NIP faux
+Arrête le portable en cas de NIP faux
