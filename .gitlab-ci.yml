@@ -27,7 +27,7 @@ stages:
 buildRelease:
   stage: build
   script:
-    - ./gradlew assembleRelease
+    - ./gradlew assembleDebug
   artifacts:
     paths:
     - app/build/outputs/
