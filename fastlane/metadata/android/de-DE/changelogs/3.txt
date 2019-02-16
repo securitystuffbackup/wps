@@ -1,3 +1,4 @@
 ## 3
+
   * Neu: Befehl zum Ausschalten kann konfiguriert werden
   * Verbesserte Dokumentation
