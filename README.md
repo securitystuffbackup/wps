@@ -12,3 +12,7 @@ These steps are automatically initiated on the first startup.
      height="80">](https://f-droid.org/packages/org.nuntius35.wrongpinshutdown/)
 
 ![Screenshot of Wrong PIN Shutdown](fastlane/metadata/android/en-US/images/phoneScreenshots/main.png)
+
+---
+
+[Homepage of Andreas Geyer-Schulz](https://nuntius35.gitlab.io)
