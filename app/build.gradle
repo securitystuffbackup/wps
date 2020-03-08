@@ -1,14 +1,14 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 28
-    buildToolsVersion "28.0.3"
+    compileSdkVersion 29
+    buildToolsVersion "29.0.3"
     defaultConfig {
         applicationId "org.nuntius35.wrongpinshutdown"
         minSdkVersion 15
-        targetSdkVersion 28
-        versionCode 10
-        versionName "10"
+        targetSdkVersion 29
+        versionCode 11
+        versionName "11"
     }
     buildTypes {
         release {
