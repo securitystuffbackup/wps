@@ -1,0 +1,3 @@
+ ## 12
+
+  * Show a warning if the device is not rooted.

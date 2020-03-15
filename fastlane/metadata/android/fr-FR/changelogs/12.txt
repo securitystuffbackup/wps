@@ -1,0 +1,3 @@
+## 12
+
+  * Afficher un avertissement si l'appareil n'a pas le droit « root ».

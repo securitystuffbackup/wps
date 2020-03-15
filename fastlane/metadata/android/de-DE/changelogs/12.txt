@@ -1,0 +1,3 @@
+## 12
+
+  * Zeige eine Warnung an, wenn das Gerät nicht gerooted ist.
