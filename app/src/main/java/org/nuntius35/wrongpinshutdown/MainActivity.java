@@ -5,6 +5,7 @@ import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.os.Build;
 import android.os.Bundle;
 import android.preference.Preference;
 import android.preference.EditTextPreference;
@@ -12,6 +13,7 @@ import android.preference.PreferenceManager;
 import android.preference.PreferenceFragment;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     static final int ACTIVATION_REQUEST = 1;
@@ -41,7 +43,13 @@ public class MainActivity extends AppCompatActivity {
             startActivityForResult(intent, ACTIVATION_REQUEST);
         }
 
-        sm.testRoot();
+        if(!sm.testRoot()){
+            Toast toast = Toast.makeText(context, getString(R.string.noRoot), Toast.LENGTH_LONG);
+            toast.show();
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
+                this.finishAffinity();
+            }
+        }
 
         updateStats(sm);
     }

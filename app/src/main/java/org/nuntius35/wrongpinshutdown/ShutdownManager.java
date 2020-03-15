@@ -3,6 +3,7 @@ package org.nuntius35.wrongpinshutdown;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
+
 import java.util.Calendar;
 import java.util.Date;
 
@@ -53,13 +54,15 @@ class ShutdownManager {
         }
     }
 
-    void testRoot() {
+    boolean testRoot() {
         try {
             Process process = Runtime.getRuntime().exec(
             new String[] {"su", "-c", "ls"});
             process.waitFor();
+            return(true);
         } catch (Exception ex) {
             ex.printStackTrace();
+            return(false);
         }
     }
 

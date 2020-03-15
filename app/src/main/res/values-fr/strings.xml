@@ -11,4 +11,5 @@
     <string name="shutdownHOWTO">Ici on peut changer la commande pour arrêter.\nLa commande standard est \'reboot -p\'.\nUne autre possibilité : \'svc power shutdown\'.</string>
     <string name="lastWrong" >Dernier NIP faux : \n</string>
     <string name="lastShutdown" >Dernier arrêt dû à un NIP faux : \n</string>
+    <string name="noRoot">Votre appareil ne semble pas avoir le droit « root ». Cette application ne fonctionnera pas.</string>
 </resources>

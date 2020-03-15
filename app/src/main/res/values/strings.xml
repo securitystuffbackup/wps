@@ -12,4 +12,5 @@
     <string name="shutdownCMD" translatable="false">reboot -p</string>
     <string name="lastWrong"> Last wrong PIN: \n</string>
     <string name="lastShutdown"> Last shutdown due to wrong PIN: \n</string>
+    <string name="noRoot">Your device does not seem to be rooted. This app will not work.</string>
 </resources>

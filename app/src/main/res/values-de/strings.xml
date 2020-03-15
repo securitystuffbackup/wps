@@ -11,4 +11,5 @@
     <string name="shutdownHOWTO">Hier kann der Abschaltbefehl festegelegt werden.\nDie Standardeinstellung lautet \'reboot -p\'.\nEine andere Möglichkeit ist eventuell \'svc power shutdown\'.</string>
     <string name="lastWrong" >Letzter falscher PIN: \n</string>
     <string name="lastShutdown" >Letztes Abschalten aufgrund einer falschen PIN: \n</string>
+    <string name="noRoot">Das Gerät scheint nicht gerootet zu sein. Diese App funktioniert nicht.</string>
 </resources>
