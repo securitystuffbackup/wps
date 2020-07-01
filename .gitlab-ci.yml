@@ -31,3 +31,4 @@ buildRelease:
   artifacts:
     paths:
     - app/build/outputs/
+    expire_in: 1 day
